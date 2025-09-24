@@ -28,7 +28,7 @@
 
 ## Demo Video
 
-[Watch the demo video here](demo/tab-shame-demo.mov)
+[Watch the demo video here](https://youtu.be/ScsxVYeGfSc)
 
 ---
 
