@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Shame</title>
+  <link rel="stylesheet" href="nag.css">
+</head>
+<head>
+  <link rel="stylesheet" href="modern.css">
+</head>
+<body>
+  <div class="card" id="mainCard">
+  <img src="images/logo.png" alt="Tab Focus Logo" class="logo" id="nagLogo">
+    <p id="quote"></p>
+    <div id="stats">
+      <p id="tabStats"></p>
+      <p id="windowStats"></p>
+    </div>
+    <h1 id="countdown"></h1>
+    <!-- <p id="subtext">Loading your page... while we judge your life choices.</p> -->
+    <div class="controls">
+  <button id="muteBtn" aria-label="Mute or unmute sounds">Mute Sounds</button>
+  <button id="snoozeBtn" aria-label="Snooze nag for 10 minutes">Snooze 10 min</button>
+  <button id="settingsBtn" aria-label="Open settings page">Settings</button>
+    </div>
+  </div>
+  <script src="nag.js"></script>
+  <script>
+    // Apply dark mode if enabled in storage
+    chrome.storage && chrome.storage.sync.get("darkMode", (data) => {
+      if (data.darkMode) document.body.classList.add("dark-mode");
+    });
+  </script>
+</body>
+</html>

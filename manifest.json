@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Shame",
+  "version": "1.1",
+  "description": "Tab Shame helps you focus by limiting tabs/windows, nagging you with custom quotes, dark mode, snooze, and more.",
+  "permissions": ["tabs", "windows", "storage"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "web_accessible_resources": [{
+    "resources": ["nag.html", "sounds/*", "images/*"],
+    "matches": ["<all_urls>"]
+  }],
+  "icons": {
+    "16": "images/logo.png",
+    "48": "images/logo.png",
+    "128": "images/logo.png"
+  },
+  "commands": {
+    "open-options": {
+      "suggested_key": {
+        "default": "Alt+Shift+O"
+      },
+      "description": "Open Tab Shame options page"
+    }
+  },
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_icon": {
+      "16": "images/logo.png",
+      "48": "images/logo.png",
+      "128": "images/logo.png"
+    },
+    "default_title": "Tab Shame"
+  }
+}
